@@ -1,0 +1,24 @@
+$theme:#262A2F;
+
+
+@function vw($px) {
+    @return calc($px / 750) * 100vw;
+}
+
+@mixin respond($media) {
+    @if $media =='mobile' {
+        @media (max-width: 450px) {
+            @content;
+        }
+    }
+
+    @else if $media =='desktop' {
+        @media (min-width: 450px) {
+            @content;
+        }
+    }
+}
+
+.bg-theme{
+    background-color: #262A2F;
+}
